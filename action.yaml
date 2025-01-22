@@ -7,12 +7,12 @@ inputs:
     default: 'latest'
   tasks:
     description: "Tasks to run, separated by spaces"
-    required: true
+    required: false
+    default: 'check'
 outputs:
   output:
     description: "Task output"
     value: ${{ steps.task-run.outputs.output}}
-    default: 'check'
 runs:
   using: "composite"
   steps:
